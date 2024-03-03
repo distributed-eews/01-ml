@@ -1,0 +1,10 @@
+version: '3'
+services:
+  queue1:
+    restart: always
+    container_name: queue1
+    image: pragusga/eews:queue-v1
+    environment:
+      - BOOTSTRAP_SERVERS=<ip-kafka1>:<port-kafka1>,<ip-kafka2>:<port-kafka2>
+      - TOPIC_CONSUMER=query
+      - TOPIC_PRODUCER=p_arrival
