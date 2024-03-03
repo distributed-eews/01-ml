@@ -1,18 +1,20 @@
 version: '3'
 services:
-  queue2:
+  ml2:
     restart: always
-    container_name: queue2
-    image: pragusga/eews:queue-v1
+    container_name: ml2
+    image: pragusga/eews:ml-v1
     environment:
-      - BOOTSTRAP_SERVERS=<ip-kafka1>:<port-kafka1>,<ip-kafka2>:<port-kafka2>
-      - TOPIC_CONSUMER=query
-      - TOPIC_PRODUCER=p_arrival
-  queue3:
+      - REDIS_HOST=<redis-host>
+      - REDIS_PORT=<redis-port>
+    ports:
+      - '3002:3000'
+  ml3:
     restart: always
-    container_name: queue3
-    image: pragusga/eews:queue-v1
+    container_name: ml3
+    image: pragusga/eews:ml-v1
     environment:
-      - BOOTSTRAP_SERVERS=<ip-kafka1>:<port-kafka1>,<ip-kafka2>:<port-kafka2>
-      - TOPIC_CONSUMER=query
-      - TOPIC_PRODUCER=p_arrival
+      - REDIS_HOST=<redis-host>
+      - REDIS_PORT=<redis-port>
+    ports:
+      - '3003:3000'

@@ -1,23 +1,24 @@
-# Deploy Queue dengan Docker Compose
+# Deploy ML dengan Docker Compose
 
 ## Overview
 
-Layanan queue adalah layanan yang berfungsi untuk melakukan pooling data dan mengatasi data missing.
+Layanan ML adalah layanan yang berisi model machine learning.
 
 ## Requirements
 
 - VM dengan Docker dan Docker Compose terinstal.
+- Pastikan untuk membuka **port** yang dibutuhkan agar bisa diakses dari luar vm.
 
 ## Deployment Steps
 
-1. **Konfigurasi Queue**
+1. **Konfigurasi ML**
 
    - Pastikan environment variables pada `docker-compose.yaml` sudah benar.
 
-2. **Menjalankan Queue**
+2. **Menjalankan ML**
 
    - Navigasikan ke direktori tempat file `docker-compose.yaml` berada.
-   - Jalankan perintah berikut untuk mendeploy Queue:
+   - Jalankan perintah berikut untuk mendeploy ML:
 
      ```sh
      docker-compose up -d
