@@ -9,6 +9,7 @@ services:
       - REDIS_PORT=<redis-port>
     ports:
       - '3002:3000'
+    mem_limit: 7g
   ml3:
     restart: always
     container_name: ml3
@@ -18,3 +19,4 @@ services:
       - REDIS_PORT=<redis-port>
     ports:
       - '3003:3000'
+    mem_limit: 7g

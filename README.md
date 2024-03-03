@@ -8,6 +8,7 @@ Layanan ML adalah layanan yang berisi model machine learning.
 
 - VM dengan Docker dan Docker Compose terinstal.
 - Pastikan untuk membuka **port** yang dibutuhkan agar bisa diakses dari luar vm.
+- Pastikan vm memiliki RAM 7GB untuk satu layanan ML.
 
 ## Deployment Steps
 
