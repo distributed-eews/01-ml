@@ -7,7 +7,7 @@ services:
     environment:
       - REDIS_HOST=<redis-host>
       - REDIS_PORT=<redis-port>
-      - REDIS_PASSWORD=<redis-port>
+      - REDIS_PASSWORD=<redis-pass>
     ports:
       - '3001:3000'
     mem_limit: 7g
